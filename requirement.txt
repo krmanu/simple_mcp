@@ -1,0 +1,6 @@
+langchain
+langchain-community
+langchain-core
+mcp-use
+langchain-groq
+streamlit

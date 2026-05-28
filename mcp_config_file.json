@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "tavily": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y","mcp-remote","https://mcp.tavily.com/mcp/?tavilyApiKey=${TAVILY_API_KEY}"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
