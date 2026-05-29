@@ -1,55 +1,62 @@
-MCP AI Assistant
+# MCP AI Assistant with Tavily Search
 
-An AI-powered assistant built using Streamlit + MCP + Groq LLM with support for real-time web search and browser automation.
+## Overview
 
-Features:
+This project is an AI-powered assistant built using MCP (Model Context Protocol), Groq LLM, Streamlit, Tavily Search, and Playwright. The assistant can perform real-time web searches, retrieve up-to-date information, and interact with websites through browser automation.
 
-Real-time web search using Tavily MCP
-Fast AI responses using Groq LLM
-Browser automation with Playwright MCP
-Simple Streamlit UI
-Supports latest news and factual queries
-Dynamic website interaction and content extraction
+## Features
 
-Technologies Used:
+* Real-time web search using Tavily MCP Server
+* Browser automation using Playwright MCP
+* AI-powered responses using Groq LLM
+* Streamlit-based user interface
+* Support for dynamic website interaction and content extraction
+* Latest news and factual information retrieval
 
-Python
-Streamlit
-LangChain
-MCP (Model Context Protocol)
-Groq LLM
-Tavily Search API
-Playwright MCP
+## Tech Stack
 
-Why MCP?
+* Streamlit
+* LangChain
+* Groq LLM
+* MCP (Model Context Protocol)
+* Tavily Search
+* Playwright
+* Python
 
-MCP (Model Context Protocol) helps AI agents connect with external tools like:
+## Architecture
 
-Web Search
-Browser Automation
-APIs
-File Systems
+1. User enters a query through Streamlit UI.
+2. MCP Client connects to configured MCP servers.
+3. Tavily MCP provides real-time web search capabilities.
+4. Playwright MCP handles browser automation tasks.
+5. Groq LLM acts as the reasoning engine.
+6. MCP Agent selects the appropriate tool and generates the final response.
 
-Instead of hardcoding integrations, MCP provides a standardized way for AI agents to use tools dynamically.
+## MCP Servers Used
 
-Why Tavily?
+    ### Tavily MCP
 
-Tavily is used for:
+    Used for:
 
-Real-time internet search
-Latest news retrieval
-Accurate factual information
-AI-optimized search results
+    * Latest news retrieval
+    * Web search
+    * Fact checking
+    * Research queries
 
-It improves answer quality by giving fresh web data to the AI agent.
+    ### Playwright MCP
 
-Why Groq?
+    Used for:
 
-Groq provides ultra-fast LLM inference.
+    * Website navigation
+    * Content extraction
+    * Form interactions
+    * Dynamic page handling
 
-Benefits:
 
-Faster response generation
-Low latency
-Efficient for real-time AI applications
-Supports open-source models like openai/gpt-oss-120b
+## Use Cases
+
+* AI Research Assistant
+* News Summarization
+* Web Information Retrieval
+* Website Data Extraction
+* Browser Automation Workflows
