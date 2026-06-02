@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from mcp_use import MCPAgent, MCPClient
+from utlis.guardrail import input_guardrail, output_guardrail
 
 
 async def main():
@@ -46,10 +47,18 @@ async def main():
         # Exit condition
         if question.lower() == "exit":
             break
+        
+        # Input guardrail
+        is_valid, error_message = input_guardrail(question)
+        if not is_valid:
+            print("\nGuardrail:", error_message)
+            continue
 
         # Run AI agent
         response = await agent.run(question)
 
+        # Output guardrail
+        response = output_guardrail(response)
         # Print response
         print("\nAssistant:", response)
 

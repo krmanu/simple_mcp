@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from mcp_use import MCPAgent, MCPClient
+from utlis.guardrail import input_guardrail, output_guardrail
 
 
 load_dotenv()
@@ -41,10 +42,12 @@ async def run_agent(user_question):
             "Summarize search results in under 300 words."
         )
     )
-
+    is_valid, error_message = input_guardrail(user_question)
+    if not is_valid:    
+        return f"Guardrail: {error_message}"    
     # Run Agent
     response = await agent.run(user_question)
-
+    response = output_guardrail(response)
     return response
 
 
