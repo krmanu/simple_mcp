@@ -60,3 +60,5 @@ This project is an AI-powered assistant built using MCP (Model Context Protocol)
 * Web Information Retrieval
 * Website Data Extraction
 * Browser Automation Workflows
+
+This project uses an MCP-based agent framework with LangChain-compatible LLM integration. The MCP Agent handles reasoning and tool selection internally. LangGraph would be useful if I wanted explicit control over the workflow, such as custom routing, state management, guardrail nodes, multi-agent collaboration, or conditional execution paths.
